@@ -1,0 +1,17 @@
+.Board {
+  display: grid;
+  width: 600px;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "Secret Secret"
+    "Rows Colors"
+    "Buttons Buttons";
+}
+
+.Colors {
+  grid-area: Colors;
+}
+.Buttons {
+  grid-area: Buttons;
+}

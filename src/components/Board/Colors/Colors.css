@@ -1,0 +1,36 @@
+.Colors {
+    grid-area: Colors;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+}
+.Colors .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Colors .color {
+    width: 50px; 
+    aspect-ratio: 1/1; 
+    border-radius: 50%;
+}
+.Colors .black {
+    background-color : black
+}
+.Colors .blue {
+    background-color : blue
+}
+.Colors .brown {
+    background-color : brown
+}
+.Colors .green {
+    background-color : green
+}
+.Colors .orange {
+    background-color : orange
+}
+.Colors .red {
+    background-color : red
+}
+.Colors .purple {
+    background-color : purple
+}
