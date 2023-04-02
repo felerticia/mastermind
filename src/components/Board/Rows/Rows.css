@@ -4,6 +4,15 @@
 
 .Row {
     display: grid;
-    grid-template-columns: 20% 60% 20%;
-    height: 70px;  
+    grid-template-columns: 16% 60% 12%;
+    height: 50px;
+    background: mediumaquamarine;
+    justify-items: center;
+    align-items: center;
+    gap: 2%;    
+}
+.Row > div {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
 }

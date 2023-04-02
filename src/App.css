@@ -6,3 +6,12 @@
   align-items: center;
   font-family: 'Ubuntu', cursive;
 }
+
+.black { background-color : black }
+.blue { background-color : blue }
+.brown { background-color : brown }
+.green { background-color : green }
+.orange { background-color : orange }
+.red { background-color : red }
+.purple { background-color : purple }
+.transparent { background-color : rgba(0,0,0,.15) }

@@ -1,0 +1,22 @@
+.Button {
+    border: 0 none;
+    background: none;
+    font-family: inherit;
+    cursor: pointer;
+    font-size: 1.1em;
+    padding: 1em;
+    color: rgba(0,0,0,.6);
+    transition: all .3s;
+}
+
+.Button:hover {
+    transform: scale(1.05);
+    color: rgba(0,0,0,1);
+
+}
+.Button:disabled {
+    color: rgba(0,0,0,.2) !important;
+    transition: none;
+    transform: none !important;
+    cursor: not-allowed;
+}

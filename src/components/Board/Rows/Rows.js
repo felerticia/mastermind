@@ -1,13 +1,24 @@
 import './Rows.css'
+import Circle from '../Circle/Circle'
 
 const Rows = () => {
     
     return <div className="Rows">
         {new Array(10).fill()
-        .map (x => <div className="Row">
-                <div>1</div>
-                <div>circles</div>
-                <div>hints</div>
+        .map ((x,i) => <div className="Row" key={i}>
+                <div>{i+1}</div>
+                <div className='circles'>
+                    <Circle/>
+                    <Circle/>
+                    <Circle/>
+                    <Circle/>
+                </div>
+                <div className='hints'>
+                    <Circle/>
+                    <Circle/>
+                    <Circle/>
+                    <Circle/>
+                </div>
             </div>)
         }
     </div>
