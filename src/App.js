@@ -10,13 +10,8 @@ import { initGameState } from './constants';
 
 const App = () =>{
     const [appState, dispatch ] = useReducer(reducer,initGameState);
-    
-    const providerState = {
-        appState,
-        dispatch
-    }
 
-    return <AppContext.Provider value={providerState} >
+    return <AppContext.Provider value={[appState, dispatch]} >
         <div className="App">
             <Board/>
             <GameEnds/>

@@ -8,10 +8,10 @@ const Rows = () => {
         .map ((x,i) => <div className="Row" key={i}>
                 <div>{i+1}</div>
                 <div className='circles'>
-                    <Circle/>
-                    <Circle/>
-                    <Circle/>
-                    <Circle/>
+                    <Circle index={i}/>
+                    <Circle index={i+1}/>
+                    <Circle index={i+2}/>
+                    <Circle index={i+3}/>
                 </div>
                 <div className='hints'>
                     <Circle/>
