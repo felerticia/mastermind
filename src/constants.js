@@ -2,7 +2,6 @@ export const color_options = ['blue','black','brown','green','orange','red','pur
 export const tries = 10
 export const initGameState = {
     currentRow : 0,
-    currentCol : 0,
     currentColor : color_options[0],
     rows : new Array(tries).fill().map(_ => ['','','','']),
     hints : new Array(tries).fill().map(_ => ['','','','']),
