@@ -1,7 +1,7 @@
 import './Button.css'
 
-const Button = ({title}) =>
-    <button className="Button" disabled>
+const Button = ({title,onClick,disabled}) => 
+    <button className="Button" onClick={onClick} disabled={disabled}>
         {title}
     </button> 
 

@@ -12,3 +12,10 @@ export const setSlot = col => {
         payload: col
     }
 }
+
+export const checkRow = (pegs) => {
+    return {
+        type: actionTypes.CHECK_ROW,
+        payload : pegs
+    }
+}

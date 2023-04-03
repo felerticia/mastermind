@@ -1,4 +1,4 @@
-export const color_options = ['blue','black','brown','green','orange','red','purple']
+export const color_options = ['blue','black','white','brown','green','orange','red','purple']
 export const tries = 10
 export const initGameState = {
     currentRow : 0,

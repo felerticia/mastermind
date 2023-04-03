@@ -18,6 +18,16 @@ export const reducer = (state, action) => {
                 ...state
             }
         } 
+        
+        case actionTypes.CHECK_ROW : {
+            let { currentRow,hints } = state
+            hints[currentRow] = [...action.payload]
+            return {
+                ...state,
+                currentRow: state.currentRow + 1,
+                hints
+            }
+        } 
 
         default : 
             return state

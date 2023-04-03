@@ -5,8 +5,9 @@ import { setSlot } from '../../../reducer/actions'
 
 const Rows = () => {
 
-    const [appState,dispatch] = useAppContext()
-    const {rows,currentRow} = appState
+    const [ appState, dispatch ] = useAppContext()
+    const { rows, currentRow, hints } = appState
+
     const onClick = col => {
         dispatch(setSlot(col))
     } 
@@ -16,16 +17,16 @@ const Rows = () => {
         .map ((x,i) => <div className={`Row ${i===currentRow ? 'active' : ''}`} key={i}>
                 <div>{i+1}</div>
                 <div className='circles'>
-                    <Circle color={rows[i][0]} onClick={() => onClick(i)} index={i}/>
-                    <Circle color={rows[i][1]} onClick={() => onClick(i+1)} index={i+1}/>
-                    <Circle color={rows[i][2]} onClick={() => onClick(i+2)} index={i+2}/>
-                    <Circle color={rows[i][3]} onClick={() => onClick(i+3)} index={i+3}/>
+                    <Circle color={rows[i][0]} onClick={() => i === currentRow && onClick(0)}/>
+                    <Circle color={rows[i][1]} onClick={() => i === currentRow && onClick(1)}/>
+                    <Circle color={rows[i][2]} onClick={() => i === currentRow && onClick(2)}/>
+                    <Circle color={rows[i][3]} onClick={() => i === currentRow && onClick(3)}/>
                 </div>
                 <div className='hints'>
-                    <Circle/>
-                    <Circle/>
-                    <Circle/>
-                    <Circle/>
+                    <Circle color={hints[i][0]}/>
+                    <Circle color={hints[i][1]}/>
+                    <Circle color={hints[i][2]}/>
+                    <Circle color={hints[i][3]}/>
                 </div>
             </div>)
         }
