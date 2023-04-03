@@ -5,3 +5,10 @@ export const setColor = color => {
         payload: color
     }
 }
+
+export const setSlot = col => {
+    return {
+        type: actionTypes.SET_SLOT,
+        payload: col
+    }
+}

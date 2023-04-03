@@ -10,6 +10,15 @@ export const reducer = (state, action) => {
             }
         } 
 
+        case actionTypes.SET_SLOT : {
+            const row = [...state.rows[state.currentRow]]
+            row[action.payload] = state.currentColor
+            state.rows[state.currentRow] = [...row]
+            return {
+                ...state
+            }
+        } 
+
         default : 
             return state
     }
