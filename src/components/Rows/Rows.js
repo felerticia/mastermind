@@ -1,7 +1,7 @@
 import './Rows.css'
 import Circle from '../Circle/Circle'
-import { useAppContext } from '../../../contexts/Context'
-import { setSlot } from '../../../reducer/actions'
+import { useAppContext } from '../../contexts/Context'
+import { setSlot } from '../../reducer/actions'
 
 const Rows = () => {
 

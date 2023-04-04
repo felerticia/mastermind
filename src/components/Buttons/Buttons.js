@@ -1,5 +1,5 @@
-import { useAppContext } from '../../../contexts/Context'
-import { checkRow } from '../../../reducer/actions'
+import { useAppContext } from '../../contexts/Context'
+import { checkRow,newGame } from '../../reducer/actions'
 import Button from './Button'
 import './Buttons.css'
 
@@ -41,7 +41,7 @@ const Buttons = () => {
 
     return <div className="Buttons">
         <Button onClick={onCheck} disabled={!isRowComplete} title="Check"/>
-        <Button onClick={onCheck} title="New Game"/>
+        <Button onClick={() => dispatch(newGame())} title="New Game"/>
     </div> 
 }
 

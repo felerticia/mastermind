@@ -1,8 +1,8 @@
-import { color_options } from "../../../constants"
+import { color_options } from "../../constants"
 import Circle from "../Circle/Circle"
 import './Colors.css'
-import { useAppContext }from '../../../contexts/Context'
-import { setColor } from '../../../reducer/actions';
+import { useAppContext }from '../../contexts/Context'
+import { setColor } from '../../reducer/actions';
 
 const Colors = () => {
     const [appState, dispatch] = useAppContext();

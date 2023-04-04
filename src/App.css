@@ -16,3 +16,23 @@
 .red { background-color : red }
 .purple { background-color : purple }
 .transparent { background-color : rgba(0,0,0,.15) }
+
+.board {
+  display: grid;
+  position: relative;
+  width: 600px;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: auto;
+  background: pink;
+  grid-template-areas: 
+    "Secret Secret"
+    "Rows Colors"
+    "Buttons Buttons";
+}
+
+.Colors {
+  grid-area: Colors;
+}
+.Buttons {
+  grid-area: Buttons;
+}

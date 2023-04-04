@@ -1,5 +1,5 @@
 import './Secret.css'
-import { useAppContext }from '../../../contexts/Context'
+import { useAppContext }from '../../contexts/Context'
 
 const Secret = () => {
     const [appState, dispatch] = useAppContext();

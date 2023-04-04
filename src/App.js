@@ -1,16 +1,18 @@
 import { useEffect, useReducer } from 'react';
 import './App.css';
-import Board from './components/Board/Board'
-import GameEnds from './components/GameEnds/GameEnds'
 
 import { reducer } from './reducer/reducer'
 import AppContext from './contexts/Context'
-import { initGameState } from './constants';
+import { initGameState } from './helper';
 import { setGameState } from './reducer/actions'
-
+import Secret from './components/Secret/Secret'
+import Rows from './components/Rows/Rows'
+import Colors from './components/Colors/Colors'
+import Buttons from './components/Buttons/Buttons'
+import GameEnds from './components/GameEnds/GameEnds'
 
 const App = () =>{
-    const [appState, dispatch ] = useReducer(reducer,initGameState);
+    const [appState, dispatch ] = useReducer(reducer,initGameState());
 
     const checkGameState = () => {
         if(appState.currentRow === 0)
@@ -36,8 +38,13 @@ const App = () =>{
 
     return <AppContext.Provider value={[appState, dispatch]} >
         <div className="App">
-            <Board/>
-            <GameEnds/>
+            <div className="board">
+                <Secret/> 
+                <Rows/>
+                <Colors/>
+                <Buttons/>
+                <GameEnds/>
+            </div>
         </div>
     </AppContext.Provider>
 }

@@ -1,3 +1,4 @@
+import { initGameState } from "../helper";
 import actionTypes from "./actionTypes";
 export const reducer = (state, action) => {
 
@@ -33,6 +34,12 @@ export const reducer = (state, action) => {
             return {
                 ...state,
                 gameState : action.payload
+            }
+        }
+
+        case actionTypes.NEW_GAME : {
+            return {
+                ...initGameState()
             }
         } 
 

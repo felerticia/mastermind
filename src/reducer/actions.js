@@ -20,6 +20,12 @@ export const checkRow = (pegs) => {
     }
 }
 
+export const newGame = () => {
+    return {
+        type: actionTypes.NEW_GAME,
+    }
+}
+
 export const setGameState = (gameState) => {
     return {
         type: actionTypes.SET_GAME_STATE,
