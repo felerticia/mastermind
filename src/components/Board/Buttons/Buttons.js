@@ -32,7 +32,7 @@ const Buttons = () => {
     }
 
     const isRowComplete = 
-        rows[currentRow].every(x => x)
+        currentRow === 10 ? false : rows[currentRow].every(x => x)
 
     const onCheck = () => {
         const hints = getHints() 

@@ -29,6 +29,13 @@ export const reducer = (state, action) => {
             }
         } 
 
+        case actionTypes.SET_GAME_STATE : {
+            return {
+                ...state,
+                gameState : action.payload
+            }
+        } 
+
         default : 
             return state
     }

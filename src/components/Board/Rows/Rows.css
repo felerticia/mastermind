@@ -5,7 +5,7 @@
 .Row {
     display: grid;
     grid-template-columns: 16% 60% 12%;
-    height: 50px;
+    height: 60px;
     background: mediumaquamarine;
     justify-items: center;
     align-items: center;
