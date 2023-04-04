@@ -23,7 +23,7 @@
   width: 600px;
   grid-template-columns: 4fr 1fr;
   grid-template-rows: auto;
-  background: pink;
+  background: #bf886c;
   grid-template-areas: 
     "Secret Secret"
     "Rows Colors"

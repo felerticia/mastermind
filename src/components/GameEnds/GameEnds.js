@@ -1,11 +1,10 @@
 import './GameEnds.css'
 import { useAppContext }from '../../contexts/Context'
 import Circle from '../Circle/Circle';
-import Button from '../Buttons/Button';
-import { newGame } from '../../reducer/actions'
+import NewGame from '../Buttons/NewGame';
 
 const GameEnds = () => {
-    const [appState, dispatch] = useAppContext();
+    const [appState] = useAppContext();
 
     if(!appState.gameState)
         return
@@ -16,8 +15,7 @@ const GameEnds = () => {
         <div className='secret'>
             {appState.secret.map(x => <Circle color={x}/>)}
         </div>
-        <Button onClick={() => dispatch(newGame())} title="New Game"/>
-            
+        <NewGame/>
     </div>
 
 }

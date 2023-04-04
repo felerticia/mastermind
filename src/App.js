@@ -3,7 +3,7 @@ import './App.css';
 
 import { reducer } from './reducer/reducer'
 import AppContext from './contexts/Context'
-import { initGameState } from './helper';
+import { checkGameState, initGameState } from './helper';
 import { setGameState } from './reducer/actions'
 import Secret from './components/Secret/Secret'
 import Rows from './components/Rows/Rows'
@@ -14,22 +14,8 @@ import GameEnds from './components/GameEnds/GameEnds'
 const App = () =>{
     const [appState, dispatch ] = useReducer(reducer,initGameState());
 
-    const checkGameState = () => {
-        if(appState.currentRow === 0)
-            return ''
-
-        const row = appState.currentRow - 1
-        if (row === 9 && appState.hints[row].some(x => x !== 'black'))
-            return 'lost'
-
-        if (appState.hints[row].every(x => x === 'black'))
-            return 'won'
-
-        return ''
-    }
-
     useEffect(() => {
-        const gameState = checkGameState()
+        const gameState = checkGameState(appState.hints,appState.currentRow-1)
         if (gameState === appState.gameState)
             return
         else    
